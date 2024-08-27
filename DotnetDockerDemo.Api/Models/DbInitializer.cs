@@ -21,7 +21,8 @@ public class DbInitializer : IDbInitializer
     {
         try
         {
-            await _context.Database.EnsureCreatedAsync();
+            await _context.Database.MigrateAsync();
+            //await _context.Database.EnsureCreatedAsync();
             if (await _context.People.AnyAsync())
             {
                 return;

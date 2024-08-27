@@ -1,8 +1,11 @@
 services:
   server:
+    container_name: people-apis
     build: .
     ports:
       - 8080:8080
+    depends_on:
+      - "sql"
   sql:
     image: "mcr.microsoft.com/mssql/server:2022-latest"
     container_name: sql_server
