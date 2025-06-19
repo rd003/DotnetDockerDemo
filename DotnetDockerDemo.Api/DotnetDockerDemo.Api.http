@@ -4,3 +4,5 @@ GET {{DotnetDockerDemo.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{DotnetDockerDemo.Api_HostAddress}}/api/people
+Accept: application/json
