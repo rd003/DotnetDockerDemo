@@ -21,7 +21,7 @@ public class DbInitializer : IDbInitializer
     {
         try
         {
-            await _context.Database.EnsureCreatedAsync();
+            await _context.Database.EnsureCreatedAsync(); // Not recommended for prod
             if (await _context.People.AnyAsync())
             {
                 return;
